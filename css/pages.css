@@ -1,0 +1,330 @@
+/* ==========================================================
+   pages.css
+   Section layouts for the homepage.
+   ========================================================== */
+
+/* ---------- Hero ---------- */
+.hero {
+  padding: clamp(2.5rem, 6vw, 4.5rem) var(--gutter) clamp(3.5rem, 7vw, 5rem);
+  text-align: center;
+}
+
+.hero__stage {
+  position: relative;
+  max-width: 920px;
+  margin-inline: auto;
+  padding-top: 2.75rem;
+}
+
+.hero__tag {
+  position: absolute;
+  top: 0.25rem;
+}
+
+.hero__tag--a { left: 17%; --r: -4deg; }
+.hero__tag--b { right: 17%; --r: 3deg; }
+
+.hero__hi {
+  display: block;
+  width: fit-content;
+  margin-inline: auto;
+  margin-bottom: 0.35rem;
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
+.hero__hi svg {
+  width: 46px;
+  margin: 0.1rem auto 0;
+  color: var(--ink);
+}
+
+.hero__notes {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: start;
+  gap: 1rem;
+  max-width: 760px;
+  margin: 0.75rem auto 0;
+}
+
+.hero__note-wrap {
+  position: relative;
+  padding-top: 0.9rem;
+}
+
+.hero__note-wrap--left { justify-self: start; }
+.hero__note-wrap--right { justify-self: end; }
+
+.hero__note-wrap svg {
+  position: absolute;
+  top: -1.1rem;
+  width: 30px;
+  color: var(--ink);
+}
+
+.hero__note-wrap--left svg { right: -1.5rem; }
+.hero__note-wrap--right svg { left: -1.5rem; transform: scaleX(-1); }
+
+.hero__note-wrap--left .note { --r: -3deg; }
+.hero__note-wrap--right .note { --r: 2deg; }
+
+.hero .status {
+  padding-top: 0.6rem;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.hero__avatar {
+  position: absolute;
+}
+
+.hero__avatar--a { left: 1%; top: 40%; --r: -6deg; }
+.hero__avatar--b { right: 1%; top: 70%; --r: 8deg; }
+
+.hero__hint {
+  position: absolute;
+  left: 0;
+  top: 22%;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  transform: rotate(-4deg);
+}
+
+.hero__line {
+  max-width: 21ch;
+  margin: clamp(2.75rem, 6vw, 4rem) auto 1.75rem;
+  font-size: var(--text-2xl);
+}
+
+.hero__line .glyph {
+  display: inline-block;
+  width: 0.78em;
+  height: 0.78em;
+  margin-inline: 0.12em;
+  vertical-align: -0.08em;
+  transition: transform 600ms var(--spring);
+}
+
+.hero__line .glyph:hover { transform: rotate(180deg) scale(1.15); }
+
+@media (max-width: 760px) {
+  .hero__stage { padding-top: 3.5rem; }
+  .hero__tag--a { left: 2%; }
+  .hero__tag--b { right: 2%; top: 1.9rem; }
+
+  .hero__notes {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem 0.75rem;
+  }
+
+  .hero .status {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    justify-content: center;
+  }
+
+  .hero__avatar,
+  .hero__hint { display: none; }
+}
+
+/* ---------- Divider ---------- */
+.divider {
+  width: 100%;
+  height: 40px;
+  color: #b9b6ac;
+}
+
+/* ---------- About ---------- */
+.about {
+  padding-top: 1.5rem;
+}
+
+.about__kicker {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.about__grid {
+  display: grid;
+  grid-template-columns: 200px minmax(0, 1fr) 230px;
+  gap: clamp(1.5rem, 4vw, 3.5rem);
+  align-items: start;
+  max-width: 1080px;
+  margin-inline: auto;
+}
+
+.about__photo {
+  --r: -5deg;
+  margin-top: 3rem;
+}
+
+.about__center {
+  text-align: center;
+}
+
+.about__text {
+  max-width: 44ch;
+  margin: 1.75rem auto 2.5rem;
+  font-family: "Courier Prime", "Courier New", Courier, monospace;
+  font-size: clamp(1.05rem, 0.95rem + 0.5vw, 1.25rem);
+  line-height: 1.75;
+}
+
+.about__card {
+  --r: 3deg;
+  margin-top: 1rem;
+}
+
+.about__card li {
+  padding-left: 1.1rem;
+  position: relative;
+}
+
+.about__card li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 11px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--red);
+}
+
+@media (max-width: 900px) {
+  .about__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .about__center {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+
+  .about__photo { margin-top: 0; max-width: 220px; justify-self: center; }
+  .about__card { margin-top: 0; }
+}
+
+@media (max-width: 560px) {
+  .about__grid { grid-template-columns: 1fr; }
+  .about__photo,
+  .about__card { justify-self: center; width: min(100%, 260px); }
+}
+
+/* ---------- Work ---------- */
+.work__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 0.75rem 2rem;
+  max-width: 1080px;
+  margin: 0 auto 2rem;
+}
+
+.work__head .hand { font-size: 1.1rem; margin-bottom: 0.25rem; }
+.work__head h2 { font-size: var(--text-2xl); }
+
+.stack {
+  max-width: 1080px;
+  margin-inline: auto;
+  filter: drop-shadow(0 18px 30px rgba(31, 30, 28, 0.16));
+}
+
+/* ---------- Paperwork ---------- */
+.paperwork__head {
+  max-width: 1080px;
+  margin: 0 auto 2.25rem;
+}
+
+.paperwork__head .hand { font-size: 1.1rem; margin-bottom: 0.25rem; }
+.paperwork__head h2 { font-size: var(--text-2xl); }
+
+.paperwork__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1.5rem, 4vw, 3rem);
+  max-width: 1080px;
+  margin-inline: auto;
+}
+
+.paperwork__grid .index-card:first-child { --r: -1.5deg; }
+.paperwork__grid .index-card:last-child { --r: 1.5deg; }
+
+.paperwork__grid .index-card {
+  transform: rotate(var(--r));
+  transition: transform 400ms var(--spring);
+}
+
+.paperwork__grid .index-card:hover { transform: rotate(0deg) translateY(-4px); }
+
+.cert-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.cert-list span:last-child { color: var(--ink-soft); white-space: nowrap; }
+
+@media (max-width: 760px) {
+  .paperwork__grid { grid-template-columns: 1fr; }
+}
+
+/* ---------- Contact ---------- */
+.contact {
+  text-align: center;
+}
+
+.contact .hand {
+  margin-bottom: 0.75rem;
+  font-size: 1.3rem;
+}
+
+.contact .namebox__name {
+  justify-content: center;
+  font-size: clamp(2.5rem, 1.5rem + 5vw, 5.25rem);
+}
+
+.contact__lede {
+  max-width: 36rem;
+  margin: 1.5rem auto 0;
+  color: var(--ink-soft);
+  font-size: var(--text-lg);
+}
+
+.contact__email {
+  display: inline-block;
+  margin-top: 0.75rem;
+  font-weight: 600;
+  font-size: var(--text-xl);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-color: var(--red);
+  text-underline-offset: 0.2em;
+  overflow-wrap: anywhere;
+}
+
+.contact__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.9rem;
+  margin-top: 2rem;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem 2rem;
+  padding: 1.1rem var(--gutter);
+  border-top: 1.5px solid var(--line);
+  background: var(--paper);
+  color: var(--ink-soft);
+}
