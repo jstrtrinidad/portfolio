@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>RMTY Designs | Jester Trinidad</title>
-  <meta name="description" content="A centralized communication system for RMTY Designs, an architecture studio.">
+  <meta name="description" content="A centralized communication platform for RMTY Designs, an architecture studio, now deployed for the client.">
   <meta property="og:title" content="RMTY Designs | Jester Trinidad">
-  <meta property="og:description" content="A centralized communication system for RMTY Designs, an architecture studio.">
+  <meta property="og:description" content="A centralized communication platform for RMTY Designs, an architecture studio, now deployed for the client.">
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@500&family=Kalam&family=Pixelify+Sans:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Geist:wght@400;500;600&family=Geist+Mono:wght@500&family=Kalam&family=Pixelify+Sans:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/base.css">
   <link rel="stylesheet" href="../css/components.css">
   <link rel="stylesheet" href="../css/pages.css">
@@ -63,10 +63,10 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M20 12H5M11 5l-7 7 7 7"/></svg>
           All projects
         </a>
-        <p class="mono case__meta">Client project, Software Engineering, Aug 2025 to May 2026</p>
+        <p class="mono case__meta">Client project, Aug 2025 to May 2026</p>
         <h1 class="case__title">RMTY Designs</h1>
-        <p class="case__lede">A centralized communication system for RMTY Designs, an architecture studio.</p>
-        <div class="case__stickers"><span class="sticker sticker--pink" data-drag>Project Manager and UI/UX Designer</span><span class="sticker sticker--butter" data-drag>Team of 8</span><span class="sticker sticker--mint" data-drag>Real client</span></div>
+        <p class="case__lede">A centralized communication platform for RMTY Designs, an architecture studio, now deployed for the client.</p>
+        <div class="case__stickers"><span class="sticker sticker--pink" data-drag>Project Manager</span><span class="sticker sticker--mint" data-drag>Developer</span><span class="sticker sticker--butter" data-drag>Team of 8</span><span class="sticker sticker--sky" data-drag>Deployed for the client</span></div>
         <div class="case__links"><a class="btn" href="https://rmtyarchitects.com/" target="_blank" rel="noopener"><span class="btn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span>Visit rmtyarchitects.com</a><p class="case__note">Client project, so the code is private.</p></div>
       </header>
 
@@ -78,41 +78,43 @@
         <div class="case__grid">
           <div class="case__main">
             <h2>The problem</h2>
-            <p>RMTY Designs is an architecture studio. For our Software Engineering course, our team built a centralized communication system for the studio, so client communication could be managed in one place with automated SMS messaging.</p>
+            <p>RMTY Designs, an architecture studio, received client inquiries through scattered channels. Between 8 and 10 inquiries slipped through every week, and booking confirmations and reminders were all sent by hand.</p>
 
             <h2>What I did</h2>
             <ul class="case__points">
-              <li>Coordinated an 8-member team, translating client requirements into system features and project milestones.</li>
-              <li>Refined workflows and features across 3 to 4 rounds of stakeholder feedback.</li>
-              <li>Designed the wireframes, user flows, and high-fidelity Figma prototypes based on client requirements.</li>
-              <li>Built backend communication features, including an SMS API integration for automated messaging.</li>
+              <li>Replaced the studio&#x27;s scattered inquiry channels with one centralized platform, cutting missed client inquiries from 8 to 10 per week to zero.</li>
+              <li>Led an 8-member team for 10 months, breaking client requirements into milestones across 4+ feedback rounds.</li>
+              <li>Designed the wireframes and UI/UX in Figma.</li>
+              <li>Built the Laravel backend and integrated an SMS API that automates 10 to 15 booking confirmations and reminders per week, replacing messages sent by hand.</li>
+              <li>Delivered the platform, which is now deployed for the client.</li>
             </ul>
 
             <h2>What it does</h2>
             <ul class="features">
-              <li class="feature"><h3>One inbox</h3><p>Client communication managed in a single system.</p></li>
-              <li class="feature"><h3>Automated SMS</h3><p>Messages sent automatically through an SMS API.</p></li>
-              <li class="feature"><h3>Client-reviewed flows</h3><p>Workflows refined with the client over several feedback rounds.</p></li>
+              <li class="feature"><h3>One inbox</h3><p>Every client inquiry lands in one place, so none get missed.</p></li>
+              <li class="feature"><h3>Automated SMS</h3><p>Booking confirmations and reminders go out on their own.</p></li>
+              <li class="feature"><h3>Shaped with the client</h3><p>Refined over 4+ rounds of feedback with the studio.</p></li>
+              <li class="feature"><h3>Live for the client</h3><p>Deployed and in use by the studio.</p></li>
             </ul>
 
             <h2>How it works</h2>
-            <p>The system runs on Laravel with a React front end and a SQL database, served with Apache on Linux. The SMS integration uses an external API to send automated messages.</p>
+            <p>The platform runs on a Laravel backend with a React front end and a MySQL database. An SMS API sends booking confirmations and reminders automatically, replacing messages the studio used to send by hand.</p>
           </div>
 
           <aside class="index-card tape case__facts">
             <p class="index-card__title">Project facts</p>
             <dl>
-              <dt>Role</dt><dd>Project Manager and UI/UX Designer</dd><dt>Team</dt><dd>8 members</dd><dt>Client</dt><dd>RMTY Designs, architecture studio</dd><dt>Timeline</dt><dd>Aug 2025 to May 2026</dd>
-              <dt>Built with</dt><dd><ul class="tech"><li>Laravel</li><li>React</li><li>SQL</li><li>Apache</li><li>Linux</li></ul></dd>
+              <dt>Role</dt><dd>Project Manager and Developer</dd><dt>Team</dt><dd>8 members</dd><dt>Client</dt><dd>RMTY Designs, architecture studio</dd><dt>Timeline</dt><dd>Aug 2025 to May 2026</dd><dt>Result</dt><dd>Missed inquiries cut from 8 to 10 a week to zero</dd>
+              <dt>Built with</dt><dd><ul class="tech"><li>Laravel</li><li>React</li><li>MySQL</li><li>Figma</li></ul></dd>
               <dt>Links</dt><dd><a href="https://rmtyarchitects.com/" target="_blank" rel="noopener">Visit rmtyarchitects.com</a></dd>
             </dl>
           </aside>
         </div>
       </section>
 
-      <a class="case__next" href="4-siblings.html">
+      <a class="case__next" href="forwardplanner.html">
         <span class="hand">next project</span><br>
-        <strong>4 Siblings</strong>
+        <strong>ForwardPlanner</strong>
       </a>
     </main>
 

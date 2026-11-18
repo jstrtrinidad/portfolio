@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>4 Siblings Motorcycle Service | Jester Trinidad</title>
-  <meta name="description" content="An operations system design for a motorcycle repair shop, covering job orders, parts usage, and customer records.">
+  <meta name="description" content="A searchable operations system for a motorcycle repair shop that ran on paper, with dashboards for the owner.">
   <meta property="og:title" content="4 Siblings Motorcycle Service | Jester Trinidad">
-  <meta property="og:description" content="An operations system design for a motorcycle repair shop, covering job orders, parts usage, and customer records.">
+  <meta property="og:description" content="A searchable operations system for a motorcycle repair shop that ran on paper, with dashboards for the owner.">
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@500&family=Kalam&family=Pixelify+Sans:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Geist:wght@400;500;600&family=Geist+Mono:wght@500&family=Kalam&family=Pixelify+Sans:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/base.css">
   <link rel="stylesheet" href="../css/components.css">
   <link rel="stylesheet" href="../css/pages.css">
@@ -63,55 +63,56 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M20 12H5M11 5l-7 7 7 7"/></svg>
           All projects
         </a>
-        <p class="mono case__meta">Client project, business analysis, Aug to Sep 2026</p>
+        <p class="mono case__meta">Client project, Aug 2026 to present</p>
         <h1 class="case__title">4 Siblings Motorcycle Service</h1>
-        <p class="case__lede">An operations system design for a motorcycle repair shop, covering job orders, parts usage, and customer records.</p>
-        <div class="case__stickers"><span class="sticker sticker--mint" data-drag>Business analysis</span><span class="sticker sticker--butter" data-drag>Real client</span><span class="sticker sticker--sky" data-drag>Solution design</span></div>
-        <div class="case__links"><p class="case__note">Solution design for a client. No public site or code.</p></div>
+        <p class="case__lede">A searchable operations system for a motorcycle repair shop that ran on paper, with dashboards for the owner.</p>
+        <div class="case__stickers"><span class="sticker sticker--mint" data-drag>Project Manager</span><span class="sticker sticker--pink" data-drag>Developer</span><span class="sticker sticker--butter" data-drag>Team of 5</span><span class="sticker sticker--sky" data-drag>Real client</span></div>
+        <div class="case__links"><p class="case__note">In client testing. The code is private.</p></div>
       </header>
 
       <figure class="case__cover">
-        <div class="shot tape "><div class="shot__bar" aria-hidden="true"><span></span><span></span><span></span><span class="shot__url">4-siblings / solution design</span></div><div class="shot__cover" style="--cover: var(--mint);"><strong>4 SIBLINGS</strong><span>motorcycle service operations</span></div></div>
+        <div class="shot tape "><div class="shot__bar" aria-hidden="true"><span></span><span></span><span></span><span class="shot__url">4-siblings / job orders</span></div><div class="shot__cover" style="--cover: var(--mint);"><strong>4 SIBLINGS</strong><span>motorcycle service operations</span></div></div>
       </figure>
 
       <section class="section case__body">
         <div class="case__grid">
           <div class="case__main">
             <h2>The problem</h2>
-            <p>4 Siblings Motorcycle Service wanted better visibility into its daily operations. We started by looking at how the shop handles job tracking, job orders, customer records, and parts usage, and where those processes break down.</p>
+            <p>4 Siblings Motorcycle Service ran on paper. Finding a job order or a customer&#x27;s service history meant digging through records, and each lookup took 10 minutes or more. The owner also had no clear view of how the shop was performing.</p>
 
             <h2>What I did</h2>
             <ul class="case__points">
-              <li>Interviewed the client to map current workflows and diagnose pain points in job tracking, job orders, customer records, and parts usage.</li>
-              <li>Analyzed business processes and translated findings into data requirements, KPIs, and system features.</li>
-              <li>Led the proposed solution design, including BI dashboards for operational visibility, and validated it with the client.</li>
-              <li>Authored the project charter defining scope, objectives, stakeholders, budget, and deliverables.</li>
+              <li>Led a 5-member team through on-site discovery at the shop, mapping the paper-based workflows behind each slow record lookup.</li>
+              <li>Built a searchable Laravel system for job orders and live repair status, cutting record lookups to under 2 minutes in client testing.</li>
+              <li>Built 3 Power BI dashboards tracking 7 KPIs, including turnaround time, revenue by service type, and repeat customer rate, giving the owner a clear view of shop performance for the first time.</li>
             </ul>
 
-            <h2>What the system covers</h2>
+            <h2>What it does</h2>
             <ul class="features">
-              <li class="feature"><h3>Job order tracking</h3><p>Follow each job from intake to release.</p></li>
-              <li class="feature"><h3>Parts usage</h3><p>See which parts are used and how often.</p></li>
-              <li class="feature"><h3>Customer records</h3><p>Service history in one place.</p></li>
-              <li class="feature"><h3>BI dashboards</h3><p>KPIs that give the owner operational visibility.</p></li>
+              <li class="feature"><h3>Searchable job orders</h3><p>Find any job order in under 2 minutes instead of digging through paper.</p></li>
+              <li class="feature"><h3>Live repair status</h3><p>See where each motorcycle is in the repair process.</p></li>
+              <li class="feature"><h3>Owner dashboards</h3><p>3 Power BI dashboards built on the shop&#x27;s own data.</p></li>
+              <li class="feature"><h3>7 KPIs</h3><p>Turnaround time, revenue by service type, repeat customer rate, and more.</p></li>
             </ul>
 
+            <h2>How it works</h2>
+            <p>The system runs on Laravel with a MySQL database. The same shop data feeds the Power BI dashboards, so the owner sees turnaround time, revenue by service type, and repeat customers without any extra paperwork.</p>
           </div>
 
           <aside class="index-card tape case__facts">
             <p class="index-card__title">Project facts</p>
             <dl>
-              <dt>Role</dt><dd>Project Manager, Business Analysis and Solution Design</dd><dt>Client</dt><dd>4 Siblings Motorcycle Service</dd><dt>Timeline</dt><dd>Aug to Sep 2026</dd><dt>Deliverables</dt><dd>Project charter, data requirements, KPIs, dashboard design</dd>
-              <dt>Methods</dt><dd><ul class="tech"><li>Process mapping</li><li>KPIs</li><li>BI dashboards</li><li>Project charter</li></ul></dd>
+              <dt>Role</dt><dd>Project Manager and Developer</dd><dt>Team</dt><dd>5 members</dd><dt>Client</dt><dd>4 Siblings Motorcycle Service</dd><dt>Timeline</dt><dd>Aug 2026 to present</dd><dt>Status</dt><dd>In client testing</dd><dt>Result</dt><dd>Record lookups cut from 10+ minutes to under 2</dd>
+              <dt>Built with</dt><dd><ul class="tech"><li>Laravel</li><li>MySQL</li><li>Power BI</li></ul></dd>
               
             </dl>
           </aside>
         </div>
       </section>
 
-      <a class="case__next" href="balikbayan.html">
+      <a class="case__next" href="rmty-designs.html">
         <span class="hand">next project</span><br>
-        <strong>BalikBayan</strong>
+        <strong>RMTY Designs</strong>
       </a>
     </main>
 

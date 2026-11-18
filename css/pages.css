@@ -328,3 +328,29 @@
   background: var(--paper);
   color: var(--ink-soft);
 }
+
+/* Skills card spans the full width under education and certifications */
+.paperwork__grid .index-card.paperwork__wide {
+  grid-column: 1 / -1;
+  --r: -0.5deg;
+}
+
+.paperwork__grid .index-card:nth-child(2) { --r: 1.5deg; }
+
+.skill-list li {
+  display: grid;
+  grid-template-columns: 11rem minmax(0, 1fr);
+  gap: 0 1rem;
+}
+
+.skill-list__label {
+  font-weight: 700;
+}
+
+@media (max-width: 640px) {
+  .skill-list li { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 640px) {
+  .cert-list li { flex-direction: column; gap: 0; }
+}
